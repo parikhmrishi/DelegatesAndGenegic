@@ -9,7 +9,6 @@ namespace TempratureController
     class Program
     {
         public delegate void func_ptr();
-        public delegate void message_func_ptr(int temp, DateTime date);
         static int[] random_array = new int[10];
        
         public class GenericClass<T>
