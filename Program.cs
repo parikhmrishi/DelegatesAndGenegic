@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.Entity.Infrastructure;
 using ConsoleApp1;
 using System.Threading;
 
@@ -15,9 +11,7 @@ namespace TempratureController
         public delegate void func_ptr();
         public delegate void message_func_ptr(int temp, DateTime date);
         static int[] random_array = new int[10];
-        static int min = 0,
-        max = 0;
-
+       
         public class GenericClass<T>
         {
             private T data;
@@ -104,12 +98,10 @@ namespace TempratureController
                     }
                     Warning.RaiseWarning(random_array[count]);
                 }
-
-                if(insertSuccess == 0)
-                {
-                    Console.WriteLine("Temperature didnt cross threshold value");
-                }
-                
+            }
+            if (insertSuccess == 0)
+            {
+                Console.WriteLine("Temperature didnt cross threshold value");
             }
             Console.WriteLine("Press a key to exit ....");
         }
