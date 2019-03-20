@@ -5,7 +5,6 @@ using System.Threading;
 
 namespace TempratureController
 {
-
     class Program
     {
         public delegate void func_ptr();
@@ -17,11 +16,11 @@ namespace TempratureController
 
             public T value
             {
-                
                 get
                 {
                     return this.data;
                 }
+                
                 set
                 {
                     this.data = value;
