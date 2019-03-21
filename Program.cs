@@ -72,7 +72,7 @@ namespace TempratureController
 
             for (int count = 0; count < 10; count++)
             {
-                random_number = random.Next(minimunTemperature.value, maximumTemperature.value + 1);
+                random_number = random.Next(minimunTemperature.value - 10, maximumTemperature.value + 11);
                 Console.Write(random_number + "\t ");
                 Thread.Sleep(1000);
                 random_array[count] = random_number;
@@ -81,7 +81,7 @@ namespace TempratureController
 
             for (int count = 0; count < 10; count++)
             {
-                if (random_array[count] == minimunTemperature.value || random_array[count] == maximumTemperature.value)
+                if (random_array[count] <= minimunTemperature.value || random_array[count] >= maximumTemperature.value)
                 {
                     insertSuccess = 1;
                     using (Temprature_DetailEntities context = new Temprature_DetailEntities())
