@@ -72,7 +72,7 @@ namespace TempratureController
 
             for (int count = 0; count < 10; count++)
             {
-                random_number = random.Next(minimunTemperature.value, maximumTemperature.value);
+                random_number = random.Next(minimunTemperature.value, maximumTemperature.value + 1);
                 Console.Write(random_number + "\t ");
                 Thread.Sleep(1000);
                 random_array[count] = random_number;
